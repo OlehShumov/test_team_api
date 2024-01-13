@@ -7,6 +7,8 @@ from .serializers import (
     TeamListSerializer,
     PersonSerializer,
     PersonListSerializer,
+    PersonDetailSerializer,
+    TeamDetailSerializer,
 )
 
 
@@ -17,6 +19,8 @@ class TeamViewSet(ModelViewSet):
     def get_serializer_class(self):
         if self.action == "list":
             return TeamListSerializer
+        elif self.action == "retrieve":
+            return TeamDetailSerializer
         return TeamSerializer
 
 
@@ -27,4 +31,6 @@ class PersonViewSet(ModelViewSet):
     def get_serializer_class(self):
         if self.action == "list":
             return PersonListSerializer
+        elif self.action == "retrieve":
+            return PersonDetailSerializer
         return PersonSerializer
