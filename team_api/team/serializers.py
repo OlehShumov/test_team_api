@@ -15,6 +15,12 @@ class TeamListSerializer(TeamSerializer):
         fields = "__all__"
 
 
+class TeamDetailSerializer(TeamSerializer):
+    class Meta:
+        model = Team
+        fields = "__all__"
+
+
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
@@ -22,6 +28,12 @@ class PersonSerializer(serializers.ModelSerializer):
 
 
 class PersonListSerializer(PersonSerializer):
+    class Meta:
+        model = Person
+        fields = "__all__"
+
+
+class PersonDetailSerializer(PersonSerializer):
     class Meta:
         model = Person
         fields = "__all__"
