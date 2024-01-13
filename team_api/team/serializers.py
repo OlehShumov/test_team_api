@@ -9,7 +9,7 @@ class TeamSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class TeamListSerializer(serializers.ModelSerializer):
+class TeamListSerializer(TeamSerializer):
     class Meta:
         model = Team
         fields = "__all__"
@@ -21,7 +21,7 @@ class PersonSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class PersonListSerializer(serializers.ModelSerializer):
+class PersonListSerializer(PersonSerializer):
     class Meta:
         model = Person
         fields = "__all__"
